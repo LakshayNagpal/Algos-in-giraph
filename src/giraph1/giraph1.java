@@ -1,7 +1,7 @@
 package giraph1;
 
 import org.apache.giraph.conf.GiraphConfiguration;
-//import org.apache.giraph.examples.SimpleShortestPathsComputation;
+//import org.apache.giraph.examples.SimpleShortestPathsComputation; // to run sample example, import this class and edit giraphconf.setcomputationclass(SimpleShortestPathsComputation.class)
 import org.apache.giraph.io.formats.GiraphFileInputFormat;
 import org.apache.giraph.io.formats.IdWithValueTextOutputFormat;
 import org.apache.giraph.io.formats.JsonLongDoubleFloatDoubleVertexInputFormat;
@@ -60,19 +60,19 @@ public class giraph1 implements Tool{
 		
 		giraphConf.setComputationClass(LPA.class);
 		
-		giraphConf.setVertexInputFormatClass(JsonLongDoubleFloatDoubleVertexInputFormat.class);
+		giraphConf.setVertexInputFormatClass(JsonLongDoubleFloatDoubleVertexInputFormat.class); //Input format
 		
 		GiraphFileInputFormat.addVertexInputPath(giraphConf, new Path(getInputPath()));
 		
 		giraphConf.setVertexOutputFormatClass(IdWithValueTextOutputFormat.class);
 		
-		giraphConf.setWorkerConfiguration(0, 1, 100);
+		giraphConf.setWorkerConfiguration(0, 1, 100);	// 100 workers set for the job
 		
 		giraphConf.setLocalTestMode(true);
 		
-		giraphConf.setMaxNumberOfSupersteps(100);
+		giraphConf.setMaxNumberOfSupersteps(100);		// maximum 100 supersteps can be implemented
 		
-		giraphConf.SPLIT_MASTER_WORKER.set(giraphConf, false);
+		giraphConf.SPLIT_MASTER_WORKER.set(giraphConf, false);	
 		giraphConf.USE_OUT_OF_CORE_GRAPH.set(giraphConf, true);
 		
 		GiraphJob job = new GiraphJob(giraphConf, getClass().getName());
