@@ -51,14 +51,14 @@ public class giraph1 implements Tool{
 	@Override
 	public int run(String[] argss) throws Exception {
 		// TODO Auto-generated method stub			
-		setInputPath("/home/lakshay/input-json1.txt"); // [source_id,source_value,[[dest_id, edge_value],...]]
-		setOutputPath("/home/lakshay/GiraphOutput/g22");
+		setInputPath("/home/lakshay/workspace/giraph1/input/input-json.txt"); // [source_id,source_value,[[dest_id, edge_value],...]]
+		setOutputPath("/home/lakshay/workspace/giraph1/output/SSSP");
 	
 		GiraphConfiguration giraphConf = new GiraphConfiguration(getConf());
 		
 		//giraphConf.setComputationClass(SimpleShortestPathsComputation.class);
 		
-		giraphConf.setComputationClass(LPA.class);
+		giraphConf.setComputationClass(SSSP.class);
 		
 		giraphConf.setVertexInputFormatClass(JsonLongDoubleFloatDoubleVertexInputFormat.class); //Input format
 		

@@ -12,8 +12,7 @@ import org.apache.hadoop.io.LongWritable;
 
 
 @Algorithm(
-		name="Maximum value",
-		description="This is the final LPA heuristic algorithm amongst LPA, LPA1 and LPAnik"
+		name="Maximum value"
 		)
 
 public class LPA extends BasicComputation<LongWritable, DoubleWritable, FloatWritable, DoubleWritable>{

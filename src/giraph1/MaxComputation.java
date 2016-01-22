@@ -24,7 +24,7 @@ public void compute(Vertex<LongWritable, DoubleWritable, FloatWritable> vertex, 
 	boolean x = false;
 	if(getSuperstep() == 0){
 		
-		sendMessageToAllEdges(vertex, vertex.getValue());
+		sendMessageToAllEdges(vertex, new DoubleWritable(vertex.getId().get()));
 	}
 	else{
 		for(DoubleWritable msg : messages){
@@ -34,7 +34,7 @@ public void compute(Vertex<LongWritable, DoubleWritable, FloatWritable> vertex, 
 			}
 		}
 		if(x){
-		sendMessageToAllEdges(vertex, vertex.getValue());
+		sendMessageToAllEdges(vertex, new DoubleWritable(vertex.getId().get()));
 		}
 		vertex.voteToHalt();
 	}

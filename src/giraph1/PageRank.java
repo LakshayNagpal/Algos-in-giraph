@@ -19,7 +19,7 @@ import org.apache.hadoop.io.LongWritable;
 public class PageRank extends BasicComputation<LongWritable, DoubleWritable, FloatWritable, DoubleWritable>{
 	
 
-	public static int maxsupersteps = 20;
+	public static int maxsupersteps = 20; // we can modify the number of supersteps and accordingly the value of vertices will change
 @Override
 public void compute(Vertex<LongWritable, DoubleWritable, FloatWritable> vertex, Iterable<DoubleWritable> messages) throws IOException{
 	
