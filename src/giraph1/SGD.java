@@ -1,4 +1,4 @@
-package giraph2;
+package giraph1;
 
 import java.util.*;
 import org.apache.giraph.graph.BasicComputation;

@@ -1,4 +1,4 @@
-package giraph2;
+package giraph1;
 
 import org.apache.giraph.aggregators.LongSumAggregator;
 import org.apache.giraph.master.DefaultMasterCompute;
