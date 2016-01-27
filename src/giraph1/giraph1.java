@@ -1,5 +1,6 @@
-/* package giraph1;
-
+ package giraph1;
+// to run the aggregrator class and the stochastic gradient descend algorithm, comment this driver function 
+ // and uncomment the lower driver function for this particular use.
 import org.apache.giraph.conf.GiraphConfiguration;
 //import org.apache.giraph.examples.SimpleShortestPathsComputation; // to run sample example, import this class and edit giraphconf.setcomputationclass(SimpleShortestPathsComputation.class)
 import org.apache.giraph.io.formats.GiraphFileInputFormat;
@@ -90,10 +91,10 @@ public class giraph1 implements Tool{
 		
 	}
 }
-*/
 
 
 
+/*
 package giraph1;
 
 import org.apache.giraph.conf.GiraphConfiguration;
@@ -199,3 +200,5 @@ public class giraph1 implements Tool{
 		
 	}
 }
+
+*/
