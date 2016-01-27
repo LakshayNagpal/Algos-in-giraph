@@ -52,13 +52,13 @@ public class giraph1 implements Tool{
 	public int run(String[] argss) throws Exception {
 		// TODO Auto-generated method stub			
 		setInputPath("/home/lakshay/workspace/giraph1/input/input-json.txt"); // [source_id,source_value,[[dest_id, edge_value],...]]
-		setOutputPath("/home/lakshay/workspace/giraph1/output/SSSP");
+		setOutputPath("/home/lakshay/workspace/giraph1/output/in");
 	
 		GiraphConfiguration giraphConf = new GiraphConfiguration(getConf());
 		
 		//giraphConf.setComputationClass(SimpleShortestPathsComputation.class);
 		
-		giraphConf.setComputationClass(SSSP.class);
+		giraphConf.setComputationClass(InDegree.class);
 		
 		giraphConf.setVertexInputFormatClass(JsonLongDoubleFloatDoubleVertexInputFormat.class); //Input format
 		
