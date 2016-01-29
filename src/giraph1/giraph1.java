@@ -92,7 +92,7 @@ public class giraph1 implements Tool{
 	}
 }
 
-
+// Stochastic Gradient Descend
 
 /*
 package giraph1;
